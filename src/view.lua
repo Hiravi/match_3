@@ -1,6 +1,14 @@
 local View = {}
 
 function View:drawBoard(board)
+
+    io.write("\t")
+    for j = 1, #board do
+        io.write(j .. " ")
+    end
+    io.write("\n")
+    io.write("- - - - - - - - - - - -\n")
+
     for i = 1, #board do
         io.write(i .. " | ")
 
@@ -14,8 +22,5 @@ function View:drawBoard(board)
     io.flush()
 end
 
-function View:showMessage(msg)
-    print(msg)
-end
 
 return View
